@@ -12,3 +12,5 @@ Write a C program to
 - Copy the content of file 1 to file 2 using command line arguments.
 ## Assignment 5:
 Write a C++ program to implement queue using class and object.
+## Assignment 6:
+Write a C++ programs to overload operators +, -, and * to get the addition, subtraction and multiplication of two complex numbers.
