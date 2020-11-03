@@ -7,7 +7,7 @@ public:
 // Arbitrary initialization
         for (int i = 0; i < m_; ++i)
             for (int j = 0; j < n_; ++j)
-                e_[i][j] = i + j;
+                e_[i][j] = 0;
     }
     void Input(){
         cout << "enter the elements:";
@@ -25,13 +25,13 @@ public:
         }
         cout << endl;
     }
-    void Clear(){ // Set a Zero Matrix
-        for (int i = 0; i < m_; ++i) {
-            for (int j = 0; j < n_; ++j) {
-                e_[i][j] = 0;
-            }
-        }
-    }
+//    void Clear(){ // Set a Zero Matrix
+//        for (int i = 0; i < m_; ++i) {
+//            for (int j = 0; j < n_; ++j) {
+//                e_[i][j] = 0;
+//            }
+//        }
+//    }
     friend Matrix operator+(Matrix A, Matrix B);
     friend Matrix operator-(Matrix A, Matrix B);
     friend Matrix operator*(Matrix A, Matrix B);
@@ -56,7 +56,7 @@ Matrix operator-(Matrix A, Matrix B){
 }
 Matrix operator*(Matrix A, Matrix B){
     Matrix Temp(A.m_,B.n_);
-    Temp.Clear();
+//    Temp.Clear();
     for (int i = 0; i < A.m_; ++i) {
         for (int j = 0; j < B.n_; ++j) {
             for (int k = 0; k < A.n_; ++k) {
@@ -73,20 +73,20 @@ int main(){
     cout << "Enter the dimensions of Matrix 2:";
     cin >> p >> q;
     Matrix M(m,n);
-    M.Clear();
+//    M.Clear();
     cout<< "For Matrix 1 ";
     M.Input();
     cout << "Matrix 1:"<<endl;
     M.Show();
     Matrix N(p,q);
-    N.Clear();
+//    N.Clear();
     cout << "For Matrix 2 ";
     N.Input();
     cout << "Matrix 2:"<<endl;
     N.Show();
     if(m == p and n == q){
         Matrix ADD(m,n);
-        ADD.Clear();
+//        ADD.Clear();
         ADD = M + N;
         cout << "The Addition of Matrix 1 and Matrix 2:"<<endl;
         ADD.Show();
@@ -96,7 +96,7 @@ int main(){
     }
     if(m == p and n == q){
         Matrix SUB(m,n);
-        SUB.Clear();
+//        SUB.Clear();
         SUB = M - N;
         cout << "The Subtraction of Matrix 1 and Matrix 2:"<<endl;
         SUB.Show();
@@ -106,7 +106,7 @@ int main(){
     }
     if(n == p){
         Matrix MUL(m,p);
-        MUL.Clear();
+//        MUL.Clear();
         MUL = M*N;
         cout<<"The Multiplication of Matrix 1 and Matrix 2:"<<endl;
         MUL.Show();
