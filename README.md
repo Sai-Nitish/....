@@ -16,3 +16,5 @@ Write a C++ program to implement queue using class and object.
 Write a C++ programs to overload operators +, -, and * to get the addition, subtraction and multiplication of two complex numbers.
 ## Assignment 7:
 Write a C++ program to add, subtract and multiply two matrices using operator overloading and friend function. Check for the conditions for each operator.
+## Assignment 8:
+Write a C++ program to distinguish function overloading and function overriding with suitable examples.
